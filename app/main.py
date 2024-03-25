@@ -12,6 +12,11 @@ app = FastAPI()
 # The URL for this API has a /docs endpoint that lets you see and test
 # your various endpoints/methods.
 
+# Work for lab 6
+@app.get("/new_endpoint")
+async def read_new_endpoint():
+    return {"message": "This is a new endpoint!"}
+
 
 # The zone apex is the 'default' page for a URL
 # This will return a simple hello world via GET method.
