@@ -17,6 +17,9 @@ app = FastAPI()
 async def read_new_endpoint():
     return {"message": "This is a new endpoint!"}
 
+@app.get("/items/{item_id}")
+async def read_item(item_id: int):
+    return {"item_id": item_id}
 
 # The zone apex is the 'default' page for a URL
 # This will return a simple hello world via GET method.
