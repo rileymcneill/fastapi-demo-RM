@@ -26,6 +26,7 @@ def get_all_albums():
     c.execute("SELECT * FROM albums ORDER BY name")
     results = c.fetchall()
     db.close()
+    return {"repos": body}
     return results
 
 # The URL for this API has a /docs endpoint that lets you see and test
